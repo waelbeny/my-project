@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Magical Licorne Rentals</title>
   <link rel="stylesheet" href="style.css" />
   <script defer>
@@ -11,6 +11,10 @@
       const navMenu = document.querySelector(".nav-menu");
       toggleMenu.addEventListener("click", () => {
         navMenu.classList.toggle("active");
+      });
+
+      document.querySelectorAll(".nav-menu a").forEach(link => {
+        link.addEventListener("click", () => navMenu.classList.remove("active"));
       });
     });
   </script>
@@ -29,40 +33,44 @@
   </header>
 
   <main>
+    <!-- Accueil -->
     <section id="accueil">
       <h2>Bienvenue dans l’univers féerique des licornes</h2>
       <p>Offrez une expérience inoubliable avec nos licornes magiques pour tous vos événements ✨.</p>
     </section>
 
+    <!-- Qui sommes-nous -->
     <section id="quisommesnous">
       <h2>Qui sommes-nous ?</h2>
       <p>
-        Magical Licorne Rentals est une équipe passionnée dédiée à faire rêver petits et grands avec des licornes uniques et merveilleuses. 
-        Basés dans une contrée enchantée, nous faisons voyager la magie jusqu’à vous !
+        Magical Licorne Rentals est une agence de rêve spécialisée dans la location de licornes pour tout événement exceptionnel.
+        Notre équipe passionnée s’engage à répandre la magie et l’émerveillement partout en France.
       </p>
     </section>
 
+    <!-- Licornes -->
     <section id="licornes">
       <h2>Nos Licornes</h2>
       <div class="licorne-list">
         <div class="licorne">
           <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Licorne Arc-en-Ciel">
           <h3>Arc-en-Ciel</h3>
-          <p>Colorée, pétillante, elle adore les anniversaires 🎉.</p>
+          <p>Colorée et joyeuse, idéale pour les anniversaires 🎉</p>
         </div>
         <div class="licorne">
           <img src="https://cdn-icons-png.flaticon.com/512/3468/3468284.png" alt="Licorne Luna">
           <h3>Luna</h3>
-          <p>Douce et élégante, idéale pour des soirées féériques 🌙.</p>
+          <p>Élégante et douce, parfaite pour les soirées ✨</p>
         </div>
         <div class="licorne">
           <img src="https://cdn-icons-png.flaticon.com/512/4036/4036626.png" alt="Licorne Stella">
           <h3>Stella</h3>
-          <p>Aventurière et rapide, parfaite pour les festivals ✨.</p>
+          <p>Aventurière, elle adore les festivals 🎪</p>
         </div>
       </div>
     </section>
 
+    <!-- Tarifs -->
     <section id="tarifs">
       <h2>Tarifs</h2>
       <ul>
@@ -73,15 +81,21 @@
       </ul>
     </section>
 
+    <!-- Contact -->
     <section id="contact">
       <h2>Contact</h2>
-      <p>Envie de magie ? Écrivez-nous à : <a href="mailto:contact@magicallicorne.com">contact@magicallicorne.com</a></p>
+      <p>Envie d’un moment magique ? Réservez dès maintenant ou envoyez-nous un message 📨</p>
       <form>
         <input type="text" placeholder="Votre nom" required />
         <input type="email" placeholder="Votre email" required />
         <textarea placeholder="Votre message" required></textarea>
         <button type="submit">Envoyer</button>
       </form>
+
+      <div class="calendly">
+        <h3>📅 Réservez votre créneau magique :</h3>
+        <iframe src="https://calendly.com/waelb-yahmed" width="100%" height="600" frameborder="0"></iframe>
+      </div>
     </section>
   </main>
 
