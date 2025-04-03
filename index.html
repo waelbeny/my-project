@@ -1,20 +1,92 @@
 <!DOCTYPE html>
-<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
-        <title>Formation GIT</title>
-        
-		
-		<link rel="stylesheet" href="./style.css">
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Magical Licorne Rentals</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleMenu = document.querySelector(".menu-toggle");
+      const navMenu = document.querySelector(".nav-menu");
+      toggleMenu.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>🦄 Magical Licorne Rentals</h1>
+    <button class="menu-toggle">☰</button>
+    <nav class="nav-menu">
+      <a href="#accueil">Accueil</a>
+      <a href="#quisommesnous">Qui sommes-nous</a>
+      <a href="#licornes">Nos Licornes</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-	</head>
-	
+  <main>
+    <section id="accueil">
+      <h2>Bienvenue dans l’univers féerique des licornes</h2>
+      <p>Offrez une expérience inoubliable avec nos licornes magiques pour tous vos événements ✨.</p>
+    </section>
 
-	<body>
+    <section id="quisommesnous">
+      <h2>Qui sommes-nous ?</h2>
+      <p>
+        Magical Licorne Rentals est une équipe passionnée dédiée à faire rêver petits et grands avec des licornes uniques et merveilleuses. 
+        Basés dans une contrée enchantée, nous faisons voyager la magie jusqu’à vous !
+      </p>
+    </section>
 
-		<!-- TITRE -->
-		<div>
-			Bienvenue dans cette formation GIT !
-		</div>
-		
-	
-</body></html>
+    <section id="licornes">
+      <h2>Nos Licornes</h2>
+      <div class="licorne-list">
+        <div class="licorne">
+          <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Licorne Arc-en-Ciel">
+          <h3>Arc-en-Ciel</h3>
+          <p>Colorée, pétillante, elle adore les anniversaires 🎉.</p>
+        </div>
+        <div class="licorne">
+          <img src="https://cdn-icons-png.flaticon.com/512/3468/3468284.png" alt="Licorne Luna">
+          <h3>Luna</h3>
+          <p>Douce et élégante, idéale pour des soirées féériques 🌙.</p>
+        </div>
+        <div class="licorne">
+          <img src="https://cdn-icons-png.flaticon.com/512/4036/4036626.png" alt="Licorne Stella">
+          <h3>Stella</h3>
+          <p>Aventurière et rapide, parfaite pour les festivals ✨.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tarifs">
+      <h2>Tarifs</h2>
+      <ul>
+        <li>1 heure magique : 100€</li>
+        <li>3 heures enchantées : 250€</li>
+        <li>Journée féérique : 600€</li>
+        <li>Événement personnalisé : sur devis</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Envie de magie ? Écrivez-nous à : <a href="mailto:contact@magicallicorne.com">contact@magicallicorne.com</a></p>
+      <form>
+        <input type="text" placeholder="Votre nom" required />
+        <input type="email" placeholder="Votre email" required />
+        <textarea placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Magical Licorne Rentals. Magie garantie 🦄</p>
+  </footer>
+</body>
+</html>
